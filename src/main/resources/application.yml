@@ -1,0 +1,27 @@
+logging:
+  level:
+    love:
+      forte:
+        simbot: debug
+
+server:
+  # springboot的监听端口
+  port: 8889
+simbot:
+  core:
+    # 可爱猫中的bot的wxid 以及可爱猫http插件的接收地址
+    bots: wxid_bqy1ezxxkdat22:http://localhost:88/httpAPI
+  component:
+    lovelycat:
+      server:
+        # 当前服务监听的可爱猫事件请求地址
+        path: /cat
+spring:
+  # jackson相关配置
+  jackson:
+    mapper:
+      # 大小写转化
+      ACCEPT_CASE_INSENSITIVE_PROPERTIES: true
+      # 驼峰转化
+    property-naming-strategy: CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
+
