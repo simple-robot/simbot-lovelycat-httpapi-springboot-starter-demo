@@ -2,14 +2,17 @@ package love.forte.test.lovelycatsbdemo.listener;
 
 import love.forte.catcode.CatCodeUtil;
 import love.forte.common.ioc.annotation.Beans;
-import love.forte.common.ioc.annotation.Depend;
 import love.forte.simbot.annotation.OnPrivate;
 import love.forte.simbot.api.message.MessageContent;
 import love.forte.simbot.api.message.MessageContentBuilder;
 import love.forte.simbot.api.message.MessageContentBuilderFactory;
 import love.forte.simbot.api.message.events.PrivateMsg;
 import love.forte.simbot.api.sender.Sender;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * 私聊消息监听的示例类。
@@ -33,8 +36,12 @@ public class MyPrivateListen {
      * 通过依赖注入获取一个 "消息正文构建器工厂"。
      *
      */
-    @Depend
-    private MessageContentBuilderFactory messageContentBuilderFactory;
+    private final MessageContentBuilderFactory messageContentBuilderFactory;
+
+    @Autowired
+    public MyPrivateListen(MessageContentBuilderFactory messageContentBuilderFactory) {
+        this.messageContentBuilderFactory = messageContentBuilderFactory;
+    }
 
     /**
      * 此监听函数监听一个私聊消息，并会复读这个消息，然后再发送一个表情。
