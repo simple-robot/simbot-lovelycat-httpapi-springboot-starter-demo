@@ -16,14 +16,14 @@ import org.springframework.stereotype.Service;
  * 所有需要被管理的类都需要标注 {@link Service} 注解。
  *
  * 由于当前是处于springboot环境下，因此强烈建议类上的注释使用：
- *  * <ul>
- *  *     <li>{@link org.springframework.stereotype.Component}</li>
- *  *     <li>{@link Service}</li>
- *  * </ul>
- *  * 等注解来代替simbot的 {@link Beans}。
- *  *
- *  * 同样的，依赖注入也请使用 {@link org.springframework.beans.factory.annotation.Autowired} 等Springboot相关的注解。
- *  *
+ * <ul>
+ *     <li>{@link org.springframework.stereotype.Component}</li>
+ *     <li>{@link Service}</li>
+ * </ul>
+ * 等注解来代替simbot的 {@link Beans}。
+ *
+ * 同样的，依赖注入也请使用 {@link org.springframework.beans.factory.annotation.Autowired} 等Springboot相关的注解。
+ *
  * @author ForteScarlet
  */
 @Service
