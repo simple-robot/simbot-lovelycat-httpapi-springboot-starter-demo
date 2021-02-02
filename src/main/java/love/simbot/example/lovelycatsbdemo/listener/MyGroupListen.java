@@ -1,14 +1,12 @@
-package love.forte.test.lovelycatsbdemo.listener;
+package love.simbot.example.lovelycatsbdemo.listener;
 
 import love.forte.catcode.Neko;
 import love.forte.common.ioc.annotation.Beans;
-import love.forte.simbot.annotation.Listener;
 import love.forte.simbot.annotation.OnGroup;
 import love.forte.simbot.api.message.MessageContent;
 import love.forte.simbot.api.message.containers.GroupAccountInfo;
 import love.forte.simbot.api.message.containers.GroupInfo;
 import love.forte.simbot.api.message.events.GroupMsg;
-import love.forte.simbot.core.configuration.ComponentBeans;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

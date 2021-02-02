@@ -1,4 +1,4 @@
-package love.forte.test.lovelycatsbdemo.listener;
+package love.simbot.example.lovelycatsbdemo.listener;
 
 import love.forte.catcode.CatCodeUtil;
 import love.forte.common.ioc.annotation.Beans;
