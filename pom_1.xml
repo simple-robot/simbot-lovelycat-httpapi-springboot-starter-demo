@@ -5,8 +5,9 @@
 
     <!--
 
-        此示例pom中所有使用的内容均为默认内容。
-        在其他的 pom_n.xml 文件中，会提供一些其他的示例
+        此示例中，更换了simbot-lovelycat-sb-starter中默认使用的json解析器。
+        默认情况下是使用jackson进行解析的，
+        此示例中切换为了fast-json。
 
     -->
 
@@ -44,8 +45,20 @@
         <dependency>
             <groupId>love.forte.simple-robot</groupId>
             <artifactId>component-lovelycat-httpapi-spring-boot-starter</artifactId>
+            <!-- 排除simbot中的jackson解析器 -->
+            <exclusions>
+                <exclusion>
+                    <groupId>love.forte.simple-robot.serialization</groupId>
+                    <artifactId>json-jackson</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
+        <!-- 切换为fastjson解析器 -->
+        <dependency>
+            <groupId>love.forte.simple-robot.serialization</groupId>
+            <artifactId>json-fastjson</artifactId>
+        </dependency>
 
         <!-- 使用spring-web进行http事件处理 -->
         <dependency>
