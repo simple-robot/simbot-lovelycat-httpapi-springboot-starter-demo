@@ -1,6 +1,6 @@
 package love.simbot.example.lovelycatsbdemo.listener;
 
-import love.forte.catcode.CatCodeUtil;
+import catcode.CatCodeUtil;
 import love.forte.common.ioc.annotation.Beans;
 import love.forte.simbot.annotation.OnPrivate;
 import love.forte.simbot.api.message.MessageContent;
