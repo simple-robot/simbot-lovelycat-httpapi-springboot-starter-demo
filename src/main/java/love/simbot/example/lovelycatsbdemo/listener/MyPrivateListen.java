@@ -11,9 +11,6 @@ import love.forte.simbot.api.sender.Sender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 /**
  * 私聊消息监听的示例类。
  * 所有需要被管理的类都需要标注 {@link Service} 注解。
